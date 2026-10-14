@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google AI Studio X Antigravity 驗收實戰｜HWDC 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    pre { white-space: pre-wrap; word-wrap: break-word; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans leading-relaxed pb-24">
+
+  <!-- ==================== 頂部工作坊資訊與導覽區 ==================== -->
+  <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border-b border-slate-800 py-10 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/40 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        HWDC 2026 實作工作坊 Lab Package
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+        Google AI Studio X Antigravity 驗收實戰
+      </h1>
+
+      <!-- 工作坊核心資訊卡 -->
+      <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-4 mb-6 grid sm:grid-cols-2 gap-3 text-sm md:text-base">
+        <div><span class="text-slate-400">📅 時間：</span><strong class="text-white">2026-10-15  10:10 - 12:10</strong></div>
+        <div><span class="text-slate-400">📍 地點：</span><strong class="text-white">607+608 會議室</strong></div>
+        <div><span class="text-slate-400">🎯 主題：</span><strong class="text-amber-300">Google AI Studio X Antigravity 驗收實戰</strong></div>
+        <div><span class="text-slate-400">🎤 講師：</span><strong class="text-white">陳佳新（佳新哥）</strong></div>
+      </div>
+
+      <p class="text-slate-300 text-base md:text-lg mb-6">
+        Agent 時代最稀缺的能力不是「做出來」，而是<strong>「看出來」</strong>——它說它做完了，你敢不敢把這個東西交給付錢的客戶？
+      </p>
+      
+      <!-- 常用工具快速超連結 -->
+      <div class="flex flex-wrap gap-3">
+        <a href="https://ai.studio" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg transition">
+          🚀 1. 開啟 Google AI Studio (ai.studio)
+        </a>
+        <a href="https://shell.cloud.google.com/" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg transition">
+          💻 2. 開啟 Google Cloud Shell
+        </a>
+        <a href="https://changhuawith.me/kbp/" target="_blank" rel="noopener" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-4 py-2.5 rounded-xl text-sm transition">
+          🍚 《爌肉之城》官網參考
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 mt-10 space-y-12">
+
+    <!-- ==================== STEP 1：AI Studio 實作與素材區 ==================== -->
+    <section class="bg-slate-900 border border-blue-500/40 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-blue-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 1</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">在 Google AI Studio 做出第一版行銷官網（選手上場）</h2>
+      </div>
+
+      <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-5 mb-6">
+        <h3 class="text-blue-400 font-bold mb-2">📌 AI Studio 操作步驟：</h3>
+        <ol class="list-decimal list-inside space-y-1.5 text-slate-300 text-sm md:text-base">
+          <li>點擊前往 <a href="https://ai.studio" target="_blank" class="text-blue-400 underline font-semibold">https://ai.studio</a> 並登入 Google 帳號。</li>
+          <li>點選 <strong>Build（建立 Web App）</strong> 或開啟對話框。</li>
+          <li>下方已準備好極簡版<strong>《爌肉之城》官網素材（圖片網址、標題與段落文字）</strong>，可直接點擊下方<strong>「📋 一鍵複製完整提示詞」</strong>貼入 AI Studio 送出。</li>
+          <li>生成後，點選右上角 <strong>Deploy / Share</strong> 取得公開網址，或點選 <strong>Code (<code>&lt;/&gt;</code>)</strong> 分頁複製 <code>index.html</code> 原始碼備用。</li>
+        </ol>
+      </div>
+
+      <!-- 獨立展示素材區 -->
+      <div class="mb-6 space-y-4">
+        <h3 class="text-amber-400 font-bold text-base">📦 極簡版《爌肉之城》官網素材：</h3>
+        
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs font-bold text-slate-400">1. 主視覺圖片網址（點擊可預覽）</span>
+            <button onclick="copyText('raw-img', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-2.5 py-1 rounded transition">📋 複製圖片網址</button>
+          </div>
+          <a href="https://changhuawith.me/kbp/img/002.jpg" target="_blank" id="raw-img" class="text-sm text-blue-400 underline break-all font-mono">https://changhuawith.me/kbp/img/002.jpg</a>
+        </div>
+
+        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs font-bold text-slate-400">2. 標題與段落文字素材</span>
+            <button onclick="copyText('raw-text', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-2.5 py-1 rounded transition">📋 複製標題與文字</button>
+          </div>
+          <pre id="raw-text" class="text-sm text-slate-300">【標題】
+彰化有料特輯《爌肉之城》的身世之謎？
+
+【段落文字】
+從2025年魔幻出擊的《彰化有料100》出版行動，至今即將發行的彰化有料特輯，彷彿被彰化有料100開啟了一扇門，這扇門開啟團隊走過「有料百人小旅行」、「有料餐桌」、「有料巡迴列車」、「有料新書分享會」......等，每一站都讓團隊的每個人一次一次的品嘗彰化有料、述說彰化有料的精神。
+
+走訪的過程，我們始終知道那碗從清晨至夜晚24小時不停歇，隨時可吃、隨處可吃的彰化爌肉飯，似乎他招喚著我們，再靠近一點，再好好看看他、好好品嘗他。
+
+因此原班人馬「白色方塊工作室、旅庫彰化、彰化旅行+」，並偕同各方的專業夥伴，雖然不至於上高山下油鍋，但當展開這份彰化爌肉飯，途中所遇見的風景、滋味，真的只有有料特輯能裝載下這一切。
+
+此次出擊包含1+1+1，有料生活米袋、有料生意碗、有料特輯刊物，一次呈上。期待你帶著這份特輯，再次走訪《爌肉之城》。</pre>
+        </div>
+      </div>
+
+      <!-- 一鍵複製給 AI Studio 的完整提示詞 -->
+      <div>
+        <h3 class="text-blue-400 font-bold text-base mb-2">✨ 第一輪 AI Studio 生成提示詞（已整合上述素材）：</h3>
+        <div class="relative bg-slate-950 border-2 border-blue-600/50 rounded-xl p-4">
+          <button onclick="copyText('prompt-step1', this)" class="absolute top-3 right-3 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition">
+            📋 一鍵複製完整提示詞
+          </button>
+          <pre id="prompt-step1" class="text-sm text-slate-200 pr-36">請幫我寫一個單一檔案（Single-file HTML，包含 CSS 與必要的 JS）的行銷推廣官網。
+
+【主視覺圖片】
+請使用這個圖片網址作為主視覺：https://changhuawith.me/kbp/img/002.jpg
+
+【主標題】
+彰化有料特輯《爌肉之城》的身世之謎？
+
+【核心文案】
+從2025年魔幻出擊的《彰化有料100》出版行動，至今即將發行的彰化有料特輯，彷彿被彰化有料100開啟了一扇門，這扇門開啟團隊走過「有料百人小旅行」、「有料餐桌」、「有料巡迴列車」、「有料新書分享會」......等，每一站都讓團隊的每個人一次一次的品嘗彰化有料、述說彰化有料的精神。
+
+走訪的過程，我們始終知道那碗從清晨至夜晚24小時不停歇，隨時可吃、隨處可吃的彰化爌肉飯，似乎他招喚著我們，再靠近一點，再好好看看他、好好品嘗他。
+
+因此原班人馬「白色方塊工作室、旅庫彰化、彰化旅行+」，並偕同各方的專業夥伴，雖然不至於上高山下油鍋，但當展開這份彰化爌肉飯，途中所遇見的風景、滋味，真的只有有料特輯能裝載下這一切。
+
+此次出擊包含1+1+1，有料生活米袋、有料生意碗、有料特輯刊物，一次呈上。期待你帶著這份特輯，再次走訪《爌肉之城》。
+
+請幫我設計一個有質感、文青雜誌風格的響應式行銷網頁，直接輸出完整的 index.html 程式碼。</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 2：Cloud Shell 與 Skill 建立 ==================== -->
+    <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-emerald-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 2</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">在 Cloud Shell 一鍵準備 Antigravity 與驗收 Skill</h2>
+      </div>
+      <p class="text-slate-300 mb-4">
+        開啟 <a href="https://shell.cloud.google.com/" target="_blank" class="text-emerald-400 underline font-semibold">Google Cloud Shell</a>，點擊下方按鈕複製整段指令貼入終端機並按 <code>Enter</code>。這會自動安裝/更新 <code>agy</code>、建立《爌肉之城》專用的驗收方法包（<code>SKILL.md</code>）並確認版本：
+      </p>
+
+      <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4">
+        <button onclick="copyText('cmd-step2', this)" class="absolute top-3 right-3 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition">
+          📋 一鍵複製環境與 Skill 建立指令
+        </button>
+        <pre id="cmd-step2" class="text-sm text-emerald-300 font-mono pr-44">curl -fsSL https://antigravity.google/cli/install.sh | bash
+export PATH="$HOME/.local/bin:$PATH"
+mkdir -p ~/kbp-lab/.agents/skills/website-audit && cd ~/kbp-lab
+
+cat << 'EOF' > ~/kbp-lab/.agents/skills/website-audit/SKILL.md
+# Metadata
+- Name: website-audit
+- Description: 針對 AI Studio 生成之行銷網站進行出貨前三大關卡驗收，並直接在終端機輸出判定結果與修正指令。
+
+# Goal
+你是一位嚴格把關出貨品質的軟體公司技術長。請針對使用者提供的「網站公開網址 (URL)」或「直接貼上的 HTML 原始碼」進行三大關卡驗收，並直接在終端機畫面印出完整驗收報告。
+
+# Workflow
+1. 步驟零：讀取網頁內容（若提供網址請用瀏覽器工具或 curl 讀取；若無法存取網址，請提示使用者直接把 HTML 程式碼貼進對話框驗收）。
+2. 關卡一（行銷目的與 LINE CTA）：檢查是否包含主標題、主視覺 002.jpg、1+1+1 組合，且必須有明確按鈕連往真實的「彰化旅行+」LINE 網址（lin.ee 或 line.me）。若連往 #、空連結或假表單，判定不合格。
+3. 關卡二（60 歲長輩手機體驗）：內文字體必須在 18px (1.125rem / text-lg) 以上。只要發現使用 12px、14px、text-xs、text-sm 等微字，列出證據並判定不合格。
+4. 關卡三（防幻覺賠償護欄）：檢查是否擅自捏造未授權優惠（如折扣、買一送一、免運、抽獎、免費贈品或虛構售價）。
+
+# Output Format
+請直接在終端機畫面印出：
+1. 【技術長驗收判定】：🔴 退回修改 (REJECT) 或 🟢 准予出貨 (ACCEPT)
+2. 【三大關卡驗收明細（含具體程式碼證據）】
+3. 【複製貼回 AI Studio 的一鍵修正指令】
+EOF
+
+agy --version</pre>
+      </div>
+
+      <p class="text-slate-300 mt-6 mb-2">接著在終端機輸入 <code>agy</code> 啟動（進入後可輸入 <code>/model</code> 查看或切換目前使用的模型）：</p>
+      <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4">
+        <button onclick="copyText('cmd-start-agy', this)" class="absolute top-3 right-3 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-3 py-1.5 rounded-md transition">
+          📋 複製啟動指令
+        </button>
+        <pre id="cmd-start-agy" class="text-sm text-emerald-300 font-mono">agy</pre>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 3：用 agy 驗收抓坑 ==================== -->
+    <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 3</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">用 agy 執行三大關卡驗收（裁判上場抓坑）</h2>
+      </div>
+      <p class="text-slate-300 mb-4">
+        在 <code>agy</code> 互動畫面中，選擇餵入<strong>公開部署網址</strong>（方式 A）或直接貼上 <strong>HTML 原始碼</strong>（方式 B）進行第一輪驗收：
+      </p>
+
+      <div class="space-y-4">
+        <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4">
+          <div class="text-xs text-amber-400 font-semibold mb-1">🔹 方式 A：餵公開部署網址給 agy</div>
+          <button onclick="copyText('prompt-audit-url', this)" class="absolute top-3 right-3 bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-md transition">
+            📋 複製驗收網址指令
+          </button>
+          <pre id="prompt-audit-url" class="text-sm text-slate-200 pr-36">請使用 website-audit Skill 驗收這個網站，並直接在終端機印出驗收報告與修正指令：https://請替換為你的公開網址</pre>
+        </div>
+
+        <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4">
+          <div class="text-xs text-amber-400 font-semibold mb-1">🔹 方式 B（備案）：若網址被阻擋，直接貼上 HTML 原始碼驗收</div>
+          <button onclick="copyText('prompt-audit-code', this)" class="absolute top-3 right-3 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-3 py-1.5 rounded-md transition">
+            📋 複製驗收原始碼指令
+          </button>
+          <pre id="prompt-audit-code" class="text-sm text-slate-200 pr-36">請使用 website-audit Skill 驗收以下網站原始碼，並直接在終端機印出驗收報告與修正指令：
+（請在此處貼上從 AI Studio 複製的 index.html 程式碼）</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 4：回 AI Studio 修正與二次複驗 ==================== -->
+    <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-purple-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 4</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">把驗收回饋丟回 AI Studio 修正 ＆ 二次複驗</h2>
+      </div>
+      <p class="text-slate-300 mb-4">
+        看到終端機印出 <strong>🔴 退回修改 (REJECT)</strong>（例如字體太小、缺少 LINE 連結、無效假按鈕）後，複製 <code>agy</code> 產出的修正指令（或複製下方標準修正指令）貼回 <a href="https://ai.studio" target="_blank" class="text-purple-400 underline font-semibold">https://ai.studio</a> 修改：
+      </p>
+
+      <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4 mb-4">
+        <button onclick="copyText('prompt-fix', this)" class="absolute top-3 right-3 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition">
+          📋 複製修正指令給 AI Studio
+        </button>
+        <pre id="prompt-fix" class="text-sm text-slate-200 pr-40">我們的技術長透過 Antigravity (agy) 驗收了你剛才寫的網頁，判定為「🔴 退回修改」。請根據以下三大驗收要求修正 index.html：
+
+1. 【修正字體大小（60歲長輩手機友善）】：全站內文字體大小請全部調大至 18px (1.125rem / text-lg) 以上，主標題請用 30px 以上。請移除所有 text-xs、text-sm 或小於 16px 的微字設定。
+2. 【補上真實 LINE CTA 轉換按鈕】：請在首頁首屏與網頁底部各加上一個醒目的行動呼籲按鈕，按鈕文字為「立即加入【彰化旅行+】LINE 好友，掌握《爌肉之城》最新資訊」，並將連結 (href) 設定為：https://lin.ee/changhuatravel （加上 target="_blank"）。
+3. 【移除無效假按鈕與未授權優惠】：請移除所有連往 # 的無效按鈕或假表單，並確保內文沒有任何未經授權的折扣、免運或免費贈品資訊。
+
+請輸出修正後的完整 index.html 程式碼。</pre>
+      </div>
+
+      <p class="text-slate-300 text-sm">
+        💡 AI Studio 修正完成後，再次把新版網址或新版程式碼丟回 <code>agy</code> 複驗，確認拿到 <strong>🟢 准予出貨 (ACCEPT)</strong>！
+      </p>
+    </section>
+
+    <!-- ==================== STEP 5（倒數第二步）：會眾到 AI Studio 製作自己的官網 ==================== -->
+    <section class="bg-slate-900 border border-rose-500/40 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-rose-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 5</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">換你上場（一）：到 AI Studio 用提示詞製作你自己的官網</h2>
+      </div>
+      <p class="text-slate-300 mb-4">
+        現在輪到你當產品主人！請前往 <a href="https://ai.studio" target="_blank" class="text-rose-400 underline font-bold">https://ai.studio</a>，挑選一個你想推廣的主題（例如：<strong>在地美食店家、社群小聚招生、咖啡店新品上市、個人品牌網站、地方旅行企劃</strong>），複製下方提示詞範本並填入你的構想，做出第一版官網：
+      </p>
+
+      <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4">
+        <button onclick="copyText('prompt-custom-site', this)" class="absolute top-3 right-3 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition">
+          📋 複製自訂官網提示詞範本
+        </button>
+        <pre id="prompt-custom-site" class="text-sm text-slate-200 pr-40">請幫我寫一個單一檔案（Single-file HTML，包含 CSS 與必要的 JS）的行銷推廣官網：
+
+- 【推廣主題】：（請填入你的主題，例如：鹿港老街深夜手沖咖啡館）
+- 【目標客群】：（請填入對象，例如：週末來彰化旅遊的旅人與在地朋友）
+- 【核心亮點】：（請填入 2~3 個特色，例如：老屋改建、自家烘焙、營業至凌晨 1 點）
+- 【行動呼籲 (CTA)】：請引導使用者點擊加入我們的官方 LINE 帳號（連結：https://lin.ee/請換成你的連結）
+
+請直接輸出完整的 index.html 程式碼。</pre>
+      </div>
+    </section>
+
+    <!-- ==================== STEP 6（最後一步）：覆寫 SKILL.md 用自己的驗收標準驗收 ==================== -->
+    <section class="bg-slate-900 border border-cyan-500/40 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-cyan-600 text-white font-bold px-3 py-1 rounded-lg text-sm">STEP 6</span>
+        <h2 class="text-xl md:text-2xl font-bold text-white">換你上場（二）：調整 agy 的 SKILL.md，用你自己的驗收標準把關！</h2>
+      </div>
+      <p class="text-slate-300 mb-4">
+        每個專案的驗收標準都不同！現在請回到 <strong>Google Cloud Shell</strong>（若還在 <code>agy</code> 裡，請先輸入 <code>/exit</code> 回到一般終端機），複製下方指令<strong>直接覆寫原本的 <code>SKILL.md</code></strong>，把裡面的關卡換成你自己的驗收標準：
+      </p>
+
+      <div class="relative bg-slate-950 border border-slate-800 rounded-xl p-4 mb-4">
+        <button onclick="copyText('cmd-custom-skill', this)" class="absolute top-3 right-3 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow transition">
+          📋 複製覆寫 SKILL.md 指令
+        </button>
+        <pre id="cmd-custom-skill" class="text-sm text-cyan-300 font-mono pr-44">cat << 'EOF' > ~/kbp-lab/.agents/skills/website-audit/SKILL.md
+# Metadata
+- Name: website-audit
+- Description: 使用我自訂的三大驗收標準，審核我的專屬行銷官網是否達到可出貨品質。
+
+# Goal
+你是一位嚴格把關出貨品質的技術長。請針對我提供的網站網址或 HTML 原始碼，依照下方三個自訂關卡嚴格驗收，並直接在終端機印出驗收報告。
+
+# Workflow
+1. 關卡一（品牌主題與 CTA 轉換檢查）：
+   - 檢查網頁是否清楚呈現我的推廣主題與核心亮點。
+   - 檢查行動呼籲 (CTA) 按鈕是否使用真實有效的連結（不可連往 # 或空連結）。
+2. 關卡二（使用者手機閱讀體驗檢查）：
+   - 檢查內文字體大小是否維持在 18px (text-lg / 1.125rem) 以上，手機版排版是否清晰易讀。
+3. 關卡三（我的自訂護欄限制 Guardrails）：
+   - 檢查 AI 是否擅自捏造了未授權的折扣、免費贈品、抽獎或錯誤的營業資訊。
+
+# Output Format
+請直接在終端機畫面印出：
+1. 【技術長驗收判定】：🔴 退回修改 (REJECT) 或 🟢 准予出貨 (ACCEPT)
+2. 【三大關卡驗收明細（含具體程式碼證據）】
+3. 【複製貼回 AI Studio 的一鍵修正指令】
+EOF
+
+cat ~/kbp-lab/.agents/skills/website-audit/SKILL.md</pre>
+      </div>
+
+      <p class="text-slate-300 text-sm mb-6">
+        💡 覆寫完成後，再次輸入 <code>agy</code> 啟動，把你在 STEP 5 做好的官網網址或原始碼餵給它：<code>請使用 website-audit Skill 驗收我的網站...</code>，看看你的官網能不能順利通過你自己的驗收標準！
+      </p>
+
+      <!-- 3 份小禮物規則 -->
+      <div class="border-t border-slate-800 pt-6">
+        <h3 class="text-amber-400 font-bold text-base mb-3">🎁 現場成果分享與 3 份小禮物：</h3>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+            <div class="text-amber-400 font-bold mb-1">🏆 最敢直接出貨獎</div>
+            <p class="text-slate-400">通過自訂 SKILL.md 驗收拿到 🟢 ACCEPT、且轉換設計最完整實用的網站。</p>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+            <div class="text-amber-400 font-bold mb-1">🏆 最有在地溫度獎</div>
+            <p class="text-slate-400">最貼近地方場景、故事與特色最吸引人的網站。</p>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+            <div class="text-amber-400 font-bold mb-1">🏆 抓出最深大坑獎</div>
+            <p class="text-slate-400">用自訂驗收標準抓出 AI 最誇張腦補（假結帳、亂送贈品、螞蟻字）的學員。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 結語與常見問題排除 ==================== -->
+    <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+      <div>
+        <h2 class="text-xl font-bold text-white mb-2">🎓 結語：帶走的東西</h2>
+        <p class="text-slate-300 text-sm md:text-base">
+          代理人開發時代，不是把責任交給 AI，而是<strong>把任務交給 Agent，把判斷與責任留在人手上</strong>。<br>
+          工具每年都會換，但今天練習的這套<strong>「定義規格（Brief）→ AI 快速原型（AI Studio）→ 封裝驗收標準（SKILL.md）→ 嚴格審查出貨（Antigravity）」</strong>方法論不會過期！
+        </p>
+      </div>
+
+      <div class="border-t border-slate-800 pt-4 text-sm text-slate-300 space-y-2.5">
+        <h3 class="text-base font-bold text-white mb-2">🛠️ 常見問題排除 (Troubleshooting)</h3>
+        <p><strong>Q1：輸入 <code>agy</code> 出現 <code>command not found</code>？</strong><br>
+        請重新執行 <code>export PATH="$HOME/.local/bin:$PATH"</code> 載入環境變數。</p>
+        <p><strong>Q2：要怎麼修改 <code>SKILL.md</code> 裡面的文字？</strong><br>
+        除了可以直接改動 STEP 6 的指令區塊貼上覆寫外，也可以在 Cloud Shell 輸入 <code>nano ~/kbp-lab/.agents/skills/website-audit/SKILL.md</code> 直接編輯（按 <code>Ctrl+O</code> 存檔、<code>Enter</code> 確認、<code>Ctrl+X</code> 離開）。</p>
+        <p><strong>Q3：如何離開 <code>agy</code> 互動模式？</strong><br>
+        在 <code>agy</code> 中輸入 <code>/exit</code> 或按下 <code>Ctrl + C</code> 即可回到一般終端機。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-6 mt-12 text-center text-slate-500 text-sm">
+    <p>MIT License · Copyright © 2026 陳佳新 (佳新哥)｜奇步應用 ChiBuApp Inc.</p>
+  </footer>
+
+  <script>
+    function copyText(elementId, btn) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.innerText;
+        btn.innerText = '✅ 已複製！';
+        btn.classList.add('bg-green-600');
+        setTimeout(() => {
+          btn.innerText = original;
+          btn.classList.remove('bg-green-600');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
